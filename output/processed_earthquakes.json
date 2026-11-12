@@ -1,0 +1,85 @@
+{
+  "generated_at_utc": "2026-11-12 20:34 UTC",
+  "total_processed": 338,
+  "average_magnitude": 3.68,
+  "max_magnitude": 6.4,
+  "average_depth_km": 53.4,
+  "severity_breakdown": {
+    "Minor (2.5 - 3.9)": 188,
+    "Light (4.0 - 4.9)": 125,
+    "Moderate (5.0 - 5.9)": 23,
+    "Strong (6.0+)": 2
+  },
+  "top_10_earthquakes": [
+    {
+      "place": "30 km WSW of Lata, Solomon Islands",
+      "magnitude": 6.4,
+      "depth_km": 17.0,
+      "severity": "Strong (6.0+)",
+      "time_utc": "2026-11-09 03:34 UTC"
+    },
+    {
+      "place": "144 km SE of Hasaki, Japan",
+      "magnitude": 6.1,
+      "depth_km": 29.0,
+      "severity": "Strong (6.0+)",
+      "time_utc": "2026-11-06 10:39 UTC"
+    },
+    {
+      "place": "central Mid-Atlantic Ridge",
+      "magnitude": 5.8,
+      "depth_km": 10.0,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-07 23:17 UTC"
+    },
+    {
+      "place": "106 km ENE of Hasaki, Japan",
+      "magnitude": 5.7,
+      "depth_km": 24.2,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-09 04:52 UTC"
+    },
+    {
+      "place": "40 km S of Puerto San Jos\u00e9, Guatemala",
+      "magnitude": 5.5,
+      "depth_km": 59.7,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-10 14:54 UTC"
+    },
+    {
+      "place": "8 km E of Shinshiro, Japan",
+      "magnitude": 5.5,
+      "depth_km": 37.1,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-07 16:04 UTC"
+    },
+    {
+      "place": "74 km NE of Hasaki, Japan",
+      "magnitude": 5.5,
+      "depth_km": 31.7,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-07 11:07 UTC"
+    },
+    {
+      "place": "South Sandwich Islands region",
+      "magnitude": 5.4,
+      "depth_km": 121.6,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-12 03:45 UTC"
+    },
+    {
+      "place": "160 km E of Masohi, Indonesia",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-09 09:48 UTC"
+    },
+    {
+      "place": "Pulau Pulau Tanimbar, Indonesia",
+      "magnitude": 5.4,
+      "depth_km": 10.0,
+      "severity": "Moderate (5.0 - 5.9)",
+      "time_utc": "2026-11-10 01:53 UTC"
+    }
+  ]
+}

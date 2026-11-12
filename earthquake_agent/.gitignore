@@ -1,0 +1,11 @@
+.env
+.adk/
+
+.env
+earthquake_agent/.env
+gcs-key.json
+*.json
+!output/*.json
+.venv/
+__pycache__/
+.adk/

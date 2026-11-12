@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USGS Weekly Earthquake Pipeline Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 960px; margin: 40px auto; padding: 0 20px; color: #222; background: #f8f9fa; }
+        h1 { color: #1a365d; }
+        .cards { display: flex; gap: 16px; margin: 20px 0; }
+        .card { background: white; padding: 16px 24px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); flex: 1; }
+        .card h3 { margin: 0 0 8px; font-size: 14px; color: #555; }
+        .card p { margin: 0; font-size: 24px; font-weight: bold; color: #1a365d; }
+        .chart-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); margin-bottom: 24px; }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #1a365d; color: white; }
+    </style>
+</head>
+<body>
+    <h1>USGS Weekly Earthquake Activity Report</h1>
+    <p>Generated at: 2026-11-12 20:34 UTC</p>
+    <div class="cards">
+        <div class="card"><h3>Total Events (M2.5+)</h3><p>338</p></div>
+        <div class="card"><h3>Max Magnitude</h3><p>6.4</p></div>
+        <div class="card"><h3>Average Magnitude</h3><p>3.68</p></div>
+        <div class="card"><h3>Avg Depth</h3><p>53.4 km</p></div>
+    </div>
+    <div class="chart-box">
+        <h2>Earthquakes by Severity Category</h2>
+        <canvas id="severityChart" height="100"></canvas>
+    </div>
+    <h2>Top 10 Strongest Earthquakes (Past 7 Days)</h2>
+    <table>
+        <thead>
+            <tr><th>Magnitude</th><th>Severity</th><th>Location</th><th>Depth</th><th>Time (UTC)</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>6.4</strong></td>
+            <td>Strong (6.0+)</td>
+            <td>30 km WSW of Lata, Solomon Islands</td>
+            <td>17.0 km</td>
+            <td>2026-11-09 03:34 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>6.1</strong></td>
+            <td>Strong (6.0+)</td>
+            <td>144 km SE of Hasaki, Japan</td>
+            <td>29.0 km</td>
+            <td>2026-11-06 10:39 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.8</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>central Mid-Atlantic Ridge</td>
+            <td>10.0 km</td>
+            <td>2026-11-07 23:17 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.7</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>106 km ENE of Hasaki, Japan</td>
+            <td>24.2 km</td>
+            <td>2026-11-09 04:52 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.5</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>40 km S of Puerto San José, Guatemala</td>
+            <td>59.7 km</td>
+            <td>2026-11-10 14:54 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.5</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>8 km E of Shinshiro, Japan</td>
+            <td>37.1 km</td>
+            <td>2026-11-07 16:04 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.5</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>74 km NE of Hasaki, Japan</td>
+            <td>31.7 km</td>
+            <td>2026-11-07 11:07 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.4</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>South Sandwich Islands region</td>
+            <td>121.6 km</td>
+            <td>2026-11-12 03:45 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.4</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>160 km E of Masohi, Indonesia</td>
+            <td>10.0 km</td>
+            <td>2026-11-09 09:48 UTC</td>
+        </tr>
+        
+        <tr>
+            <td><strong>5.4</strong></td>
+            <td>Moderate (5.0 - 5.9)</td>
+            <td>Pulau Pulau Tanimbar, Indonesia</td>
+            <td>10.0 km</td>
+            <td>2026-11-10 01:53 UTC</td>
+        </tr>
+        </tbody>
+    </table>
+    <script>
+        new Chart(document.getElementById('severityChart'), {
+            type: 'bar',
+            data: {
+                labels: ["Minor (2.5 - 3.9)", "Light (4.0 - 4.9)", "Moderate (5.0 - 5.9)", "Strong (6.0+)"],
+                datasets: [{
+                    label: 'Number of Earthquakes',
+                    data: [188, 125, 23, 2],
+                    backgroundColor: ['#3182ce', '#dd6b20', '#e53e3e', '#805ad5']
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { display: false } } }
+        });
+    </script>
+</body>
+</html>
